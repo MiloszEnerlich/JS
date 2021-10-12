@@ -1,0 +1,51 @@
+<html> 
+<head> 
+<title>
+ Przykład obliczenia obowdu i pola prostokata
+</title>
+ <script language="JavaScript">
+function Obwod_enerlich(a_ene,b_ene,obw)
+{
+ a_dana_ene=parseFloat(a_ene)
+ b_dana_ene=parseFloat(b_ene)
+ obw=2*a_dana_ene+2*b_dana_ene
+ document.getElementsByName('obj')[0].value=obw.toFixed(2); /* na dokument */
+ alert("Obwod="+obw.toFixed(2)+" cm"); /*do okna Alert */
+ pokaz1.innerHTML="Obwod="+obw.toFixed(2)+" cm"+"<br>";  /* do tabeli */
+}
+function Pole_enerlich(a_ene,b_ene,pole)
+{
+ a_dana_ene=parseFloat(a_ene)
+ b_dana_ene=parseFloat(b_ene)
+ pole=a_dana_ene*b_dana_ene
+ document.getElementsByName('pole')[0].value=pole.toFixed(2);
+ alert("Pole calkowite="+pole.toFixed(2)+" cm^2");
+ pokaz2.innerHTML="Pole calkowite="+pole.toFixed(2)+"cm^2";
+}
+ </script>
+</head> 
+<body> 
+Pobliczanie obw i pola prostokata
+<br> <br>
+<form name="formularz" action="..." onsubmit="Obwod_enerlich(this.bok_a.value,this.bok_b.value); 
+Pole_enerlich(this.bok_a.value,this.bok_b.value);return false"> 
+Podaj a=
+<input size="6" name="bok_a">
+Podaj b=
+<input size="6" name="bok_b">
+<br>
+<br>
+<input TYPE="submit" Value="oblicz" >
+<br>
+<br>
+Obwod=
+<input size="6" name="obw">
+Pole=
+<input size="6" name="pole">
+</form>
+<table>
+<tr id="pokaz1"></tr>
+<tr id="pokaz2"></tr>
+</table>
+</body> 
+</html>
