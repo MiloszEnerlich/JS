@@ -1,0 +1,28 @@
+<html>
+<head>
+<script type="text/javascript">
+
+function pociag(kraj1,wagony1,imie1){
+    this.kraj=kraj1;
+    this.wagony=wagony1;
+    this.imie=imie1;
+}//koniec konstruktora
+
+pociag.prototype.wypisz=function(){
+alert(this.kraj + ' ' + this.wagony+ ' ' + this.imie);
+}
+var pociag1 = new pociag("Czechy", "3", "Tomek"); // nowy obiekt osoba1
+var pociag2 = new pociag('Polska', '5', 'Andrzej');
+
+pociag1.wypisz(); // uruchomienie metody wypisz() dotyczącej osoby 1
+pociag2.wypisz();
+
+// poniżej dostęp do pól osoby1
+document.write("Pierwszy pociag:"+"<br>"+"Kraj produkcji: "+pociag1.kraj+"<br>"+"Liczba wagonow: "+pociag1.wagony+"<br>"+"Imie pociagu: "+pociag1.imie);
+</script>
+</head>
+<body>
+<br>
+programowanie obiektowe 
+</body>
+</html>
